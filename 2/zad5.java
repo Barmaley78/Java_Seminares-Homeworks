@@ -19,14 +19,28 @@ public class zad5 {
         try {
             writeToFile(dir(path), listFileName);
         } catch (Exception e) {
+            // try {logErrors(logFileName);} catch(Exception log_e){System.out.println(log_e);}
+            // System.out.println("При работе программы возникли ошибки.");
+            // System.out.printf("Подробный был записан в файл в текущей папке %s", logFileName);
 
         }
         finally {
             // выполняемые в любом случае действия
         } 
         }
-    }
+
+        // private static void logErrors(String l_name) throws IOException {
+        //     Logger logger = Logger.getLogger("mkdir");
+        //     FileHandler fh = new FileHandler(l_name);
+        //     logger.addHandler(fh);
     
+        //     SimpleFormatter sFormat = new SimpleFormatter();
+        //     fh.setFormatter(sFormat);
+    
+        //     //logger.setLevel(Level.INFO);
+        //     logger.log(Level.WARNING, "Тестовое логирование Warning-lvl");
+        //     logger.info("Тестовое логирование INFO-lvl");
+
     public static void writeToFile(String[] fileStrings, String filePath) throws IOException{
         FileWriter filewriter = new FileWriter(filePath);
         for (String fileString : fileStrings){
